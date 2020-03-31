@@ -23,7 +23,11 @@ function Parent() {
             <p>Count: {count}</p>
             <button onClick={handleIncrement}>Increment</button>
             <button onClick={handleDecrement}>Decrement</button>
-            <Child />
+            <Child 
+                count={count}
+                handleIncrement={handleIncrement}
+                handleDecrement={handleDecrement}
+            />
         </div>
     )
 }

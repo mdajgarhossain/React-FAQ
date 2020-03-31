@@ -1,3 +1,12 @@
 .child {
     background-color: greenyellow;
 }
+
+.child p {
+    font-size: 25px;
+}
+.child button {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
