@@ -2,11 +2,13 @@ import React from 'react';
 import './Parent.css';
 import Child from '../Child/Child';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function Parent() {
     const [count, setCount] = useState(0);
     const [courses, setCourses] = useState([]);
     const [developer, setDeveloper] = useState({});
+    const [users, setUsers] = useState([]);
 
     const ourCourses = ['Javascript', 'React', 'Redux'];
 
@@ -33,6 +35,16 @@ function Parent() {
         
     };
 
+    useEffect(() => {
+        console.log('Inside Effect');
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then((res) => res.json())
+        .then(data => {
+            console.log(data);
+            setUsers(data);
+        })
+    }, []);
+
     return (
         <div className="parent">
             <h1>I am Parent component!</h1>
@@ -48,6 +60,13 @@ function Parent() {
                 developer={developer}
                 handleDeveloper={handleDeveloper}
             />
+            
+            <h3>Data from API</h3>
+            <ol>
+                {
+                    users.map(user => <li>{user.name}</li>)
+                }
+            </ol>
         </div>
     )
 }
