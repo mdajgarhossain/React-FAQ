@@ -70,6 +70,7 @@ function Parent() {
 
             <h3>Use Bootstrap in React Application</h3>
             <h1 className="text-success">Approach 1</h1>
+            <h1 className="text-secondary">Approach 2</h1>
         </div>
     )
 }
