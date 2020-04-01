@@ -67,6 +67,9 @@ function Parent() {
                     users.map(user => <li>{user.name}</li>)
                 }
             </ol>
+
+            <h3>Use Bootstrap in React Application</h3>
+            <h1 className="text-success">Approach 1</h1>
         </div>
     )
 }
