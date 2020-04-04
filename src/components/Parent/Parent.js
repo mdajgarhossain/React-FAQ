@@ -15,12 +15,12 @@ function Parent() {
     const handleIncrement = () => {
         const newCount = count + 1;
         setCount(newCount);
-        console.log('Increment');
+        // console.log('Increment');
     };
     const handleDecrement = () => {
         const newCount = count - 1;
         setCount(newCount);
-        console.log('Decrement');
+        // console.log('Decrement');
     };
 
     const handleCourses = () => {    
@@ -31,7 +31,7 @@ function Parent() {
     const handleDeveloper = developer => {
         const newDeveloper = {...developer};
         setDeveloper(newDeveloper);
-        console.log(developer);
+        // console.log(developer);
         
     };
 
@@ -40,7 +40,7 @@ function Parent() {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then((res) => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             setUsers(data);
         })
     }, []);
