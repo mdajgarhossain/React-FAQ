@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Parent.css';
 import Child from '../Child/Child';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 function Parent() {
     const [count, setCount] = useState(0);

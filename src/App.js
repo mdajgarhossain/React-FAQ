@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useContext } from 'react';
+// import logo from './logo.svg';
 import './App.css';
 import Parent from './components/Parent/Parent';
-import { useContext } from 'react';
+import OverviewHooks from './components/OverviewHooks/OverviewHooks';
 
 const themes = {
   light: {
@@ -25,6 +25,7 @@ function App() {
         <Parent />
         <Toolbar />
       </ThemeContext.Provider>
+      <OverviewHooks />
     </div>
   );
 }
@@ -41,6 +42,7 @@ const ThemeButton = props => {
   const theme = useContext(ThemeContext);
   return(
     <div>
+      <h2>React Context API</h2>
       <button style={{background: theme.background, color: theme.foreground}}>
         I am styled by theme context!
       </button>
